@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LESSGO - Book a Ride</title>
+    <link rel="stylesheet" href="style2.css">
+</head>
+<body>
+    <header>
+        <div id="brand">
+            <img src="images/Logo.png" alt="logo" style="width: 120px;">
+            <h3>LESSGO - Book a Ride</h3>
+        </div>
+    </header>
+    <main>
+        <section>
+            <h1>Book a Ride</h1>
+            <form action="submit_booking.php" method="post"> <!-- Replace "submit_booking.php" with your form handling script -->
+                <label for="numPassengers">Number of Passengers:</label>
+                <input type="number" id="numPassengers" name="numPassengers" required><br><br>
+                
+                <label for="pickupPoint">Pickup Point:</label>
+                <input type="text" id="pickupPoint" name="pickupPoint" required><br><br>
+                
+                <label for="destination">Destination:</label>
+                <input type="text" id="destination" name="destination" required><br><br>
+                
+                <label for="additionalInfo">Additional Information:</label>
+                <textarea id="additionalInfo" name="additionalInfo" rows="4" cols="50"></textarea><br><br>
+                
+                <input type="submit" value="Submit">
+            </form>
+        </section>
+    </main>
+</body>
+</html>

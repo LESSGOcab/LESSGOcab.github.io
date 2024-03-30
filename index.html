@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LESSGO - Cab Services</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script> <!-- Linking the JavaScript file -->
+</head>
+<body>
+    <header>
+        <div id="brand">
+            <img src="images/Logo.png" alt="logo" style="width: 120px;">
+            <h3>LESSGO - Cab Services</h3>
+        </div>
+        <div id="nav">
+            <nav>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="aboutUs.html">About us</a></li>
+                    <li><a href="#">Contact us</a></li>
+                    <li><button id="cta" onclick="bookRide()">Book a Ride</button></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <section id="hero">
+            <div>
+                <img src="images/Logo.png" alt="logo" style="width: 140px;">
+                <h1>LESSGO Cab Services</h1>
+                <h3>Welcome to LESSGO! 🚗 Your hassle-free solution for getting to your destination. With our intuitive platform, you can easily book a ride in just a few clicks. Whether you're heading to work, running errands, or exploring the city, LESSGO has got you covered. Say goodbye to waiting for taxis and hello to convenience. Book your ride now and experience the ease of travel with LESSGO.</h3>
+            </div>
+        </section>
+        <section class="additional-info">
+            <div class="left-section">
+                <img src="images/sideImg.png" style="width: 350px;" >
+            </div>
+            <div class="right-section">
+                <h2>Ride with friends seamlessly</h2>
+                <p>Riding with friends just got easier: set up a group ride with Lessgo, invite your friends, and arrive at your destination. Friends who ride together save together.</p>
+                <p>Learn more <a href="#">here</a>.</p>
+            </div>
+        </section>
+        <section id="faq">
+            <div class="container">
+                <h2>Frequently Asked Questions</h2>
+                <br>
+                <div class="faq-item">
+                    <details>
+                        <summary>Can I have a lost item delivered to me?</summary>
+                        <p>Yes, if you've lost an item during your ride, you can contact our support team to arrange for its return.</p>
+                    </details>
+                </div>
+                <div class="faq-item">
+                    <details>
+                        <summary>Can I rent a car using LESSGO?</summary>
+                        <p>At the moment, we only provide cab services. However, we're continuously exploring options to enhance our services, including car rental.</p>
+                    </details>
+                </div>
+                <div class="faq-item">
+                    <details>
+                        <summary>Can I request a ride that picks up friends in different locations?</summary>
+                        <p>Currently, our platform supports single-location pickups. Each ride request should have a single pickup location.</p>
+                    </details>
+                </div>
+                <div class="faq-item">
+                    <details>
+                        <summary>Can I request a taxi on LESSGO?</summary>
+                        <p>LESSGO provides cab services operated by our network of drivers. While it's similar to a taxi service, our platform offers additional features and convenience.</p>
+                    </details>
+                </div>
+                <div class="faq-item">
+                    <details>
+                        <summary>Is there a ride option for a group of 10 people?</summary>
+                        <p>At the moment, our ride options cater to a maximum of seven passengers. For larger groups, you may need to request multiple rides.</p>
+                    </details>
+                </div>
+            </div>
+        </section>
+        
+    </main>
+    <script>
+        function toggleAnswer(question) {
+            var answer = question.nextElementSibling; // Get the next sibling element (answer)
+            answer.style.display = (answer.style.display === 'block') ? 'none' : 'block'; // Toggle the display property
+        }
+        
+    </script>
+</body>
+</html>

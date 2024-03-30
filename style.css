@@ -1,0 +1,178 @@
+/* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Basic styles */
+body {
+    font-family: Arial, sans-serif;
+    background-image: url('images/bg.png');
+    background-size: cover; /* Ensure background image covers the entire viewport */
+}
+
+header {
+    background: linear-gradient(to right, #FFA500, #FF0000);
+    color: #fff;
+    padding: 10px 20px; /* Adjusted padding */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100px;
+}
+
+#brand {
+    display: flex;
+    align-items: center;
+}
+
+#brand img {
+    width: 50px;
+    margin-right: 10px;
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+}
+
+nav ul li {
+    margin-right: 20px;
+}
+
+nav ul li:last-child {
+    margin-right: 0;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+}
+
+#cta {
+    background-color: #ffcc00;
+    color: #333;
+    padding: 8px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Hero Section styles */
+#hero {
+    background-color: rgba(255, 255, 255, 0.7); /* Semi-transparent white background */
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px; /* Rounded corners */
+    max-width: 800px; /* Reduced maximum width */
+    margin: 0 auto; /* Centerize the main part */
+    margin-top: 70px; /* Adjusted top margin */
+}
+
+#hero img {
+    width: 120px; /* Adjusted image size */
+    margin-bottom: 20px;
+}
+
+#hero h1 {
+    font-size: 28px; /* Reduced font size */
+    margin-bottom: 10px;
+}
+
+#hero h3 {
+    font-size: 16px; /* Reduced font size */
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+/* FAQ Section styles */
+#faq {
+    background-color: rgba(255, 255, 255, 0.7); /* Semi-transparent white background */
+    padding: 20px;
+    border-radius: 10px; /* Rounded corners */
+    max-width: 800px; /* Reduced maximum width */
+    margin: 20px auto; /* Centerize and provide margin */
+}
+
+.faq-item {
+    margin-bottom: 20px; /* Add spacing between each FAQ item */
+}
+
+.faq-item details {
+    border-bottom: 1px solid #ccc; /* Add bottom border for each question */
+    cursor: pointer; /* Change cursor to pointer when hovering over question */
+}
+
+.faq-item details summary {
+    list-style: none; /* Remove default list styling */
+    background: none; /* Remove background */
+    border: none; /* Remove border */
+    padding: 10px 0; /* Add padding to the summary */
+    cursor: pointer; /* Change cursor to pointer */
+    font-weight: bold; /* Make the question text bold */
+    outline: none; /* Remove default focus outline */
+    position: relative; /* Position relative for the arrow */
+}
+
+.faq-item details summary::after {
+    content: '▼'; /* Default arrow pointing down */
+    position: absolute; /* Position absolute for the arrow */
+    right: 0; /* Align arrow to the right */
+    transition: transform 0.3s; /* Add transition for smooth animation */
+}
+
+.faq-item details[open] summary::after {
+    transform: rotate(180deg); /* Rotate arrow when details are open */
+}
+
+.faq-item p {
+    padding: 0 0 0 20px; /* Add padding to the answer */
+}
+/* Style for the additional-info section */
+.additional-info {
+    display: flex; /* Use flexbox for layout */
+    justify-content: center; /* Center the items horizontally */
+    align-items: center; /* Center the items vertically */
+    padding: 20px; /* Add padding */
+    background-color: rgba(255, 255, 255, 0.7); /* Semi-transparent white background */
+    border-radius: 10px; /* Rounded corners */
+    max-width: 800px; /* Limit maximum width */
+    margin: 20px auto; /* Centerize and provide margin */
+}
+
+/* Style for the left-section containing the image */
+.left-section {
+    flex: 1; /* Allow left-section to grow to fill available space */
+    margin-right: 1px; /* Reduce spacing between left and right sections */
+    
+}
+
+.left-section img {
+    max-width: 100%; /* Set maximum width for the image */
+    height: auto; /* Maintain aspect ratio */
+    display: inline-block; /* Ensure image is centered */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add shadow */
+}
+
+/* Style for the right-section containing the text */
+.right-section {
+    flex: 1; /* Allow right-section to grow to fill available space */
+    margin-left: 10px; /* Reduce spacing between left and right sections */
+}
+
+/* Style for the text inside right-section */
+.right-section h2 {
+    font-size: 24px; /* Adjust font size for heading */
+    margin-bottom: 10px; /* Add some spacing below heading */
+    text-align: center; /* Center the text horizontally */
+}
+
+.right-section p {
+    font-size: 16px; /* Adjust font size for paragraphs */
+    line-height: 1.5; /* Set line height for better readability */
+    text-align: center; /* Center the text horizontally */
+}
+
+

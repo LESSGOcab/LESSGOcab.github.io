@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - LESSGO Cab Services</title>
+    <link rel="stylesheet" href="styleAbout.css">
+</head>
+<body>
+    <header>
+        <div id="brand">
+            <img src="images/Logo.png" alt="logo" style="width: 120px;">
+            <h3>LESSGO - Cab Services</h3>
+        </div>
+        <div id="nav">
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="aboutUs.html">About Us</a></li>
+                    <li><a>Contact Us</a></li>
+                    <li><button id="cta" onclick="bookRide()">Book a Ride</button></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <section id="about">
+            <div class="container">
+                <div class="quote">
+                    <h2>Our Mission</h2>
+                    <p>"Providing safe, reliable, and convenient transportation solutions to empower people's mobility."</p>
+                </div>
+                <div class="card">
+                    <img src="images/team1.jpg" alt="Team Member">
+                    <div class="card-content">
+                        <h2>John Doe</h2>
+                        <p>CEO & Founder</p>
+                        <p>John Doe is the visionary behind LESSGO Cab Services. With a passion for technology and transportation, he founded the company to revolutionize the way people travel.</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="images/team2.jpg" alt="Team Member">
+                    <div class="card-content">
+                        <h2>Jane Smith</h2>
+                        <p>Chief Operating Officer</p>
+                        <p>Jane Smith oversees the day-to-day operations of LESSGO. With her strong leadership skills and dedication, she ensures that the company delivers top-notch service to its customers.</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="images/team3.jpg" alt="Team Member">
+                    <div class="card-content">
+                        <h2>Michael Johnson</h2>
+                        <p>Chief Technology Officer</p>
+                        <p>Michael Johnson leads the technological advancements at LESSGO. With his expertise in software development and innovation, he drives the company's digital transformation.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Blogs Section -->
+        <section id="blogs">
+            <div class="container">
+                <h2>Our Blogs</h2>
+                <div class="blog">
+                    <h3>5 Tips for a Smooth Ride Experience</h3>
+                    <p>Check out our latest blog post for tips on how to make your ride experience with LESSGO even smoother and more enjoyable.</p>
+                </div>
+                <div class="blog">
+                    <h3>Exploring the City: Best Places to Visit</h3>
+                    <p>Discover the top destinations in your city and plan your next adventure with LESSGO.</p>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Reviews Section -->
+        <section id="reviews">
+            <div class="container">
+                <h2>Customer Reviews</h2>
+                <div class="review">
+                    <h3>Amazing Service!</h3>
+                    <p>"I've been using LESSGO for my daily commute, and I'm impressed by the excellent service and punctuality. Highly recommended!"</p>
+                </div>
+                <div class="review">
+                    <h3>Great Experience</h3>
+                    <p>"LESSGO has made traveling around the city so convenient. The drivers are friendly, and the cars are always clean and comfortable."</p>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Scroll to top button -->
+        <button id="scrollToTopBtn" onclick="scrollToTop()">Scroll To Top</button>
+    </main>
+
+    <footer>
+        <div class="container">
+            <marquee behavior="scroll" direction="left">
+                <h2>Stay Connected</h2>
+               
+            </marquee>
+            <p>Subscribe to our newsletter to receive updates and special offers.</p>
+            <form action="#" method="post">
+                <input type="email" name="email" placeholder="Enter your email" required>
+                <button type="submit">Subscribe</button>
+            </form>
+        </div>
+    </footer>
+    
+
+    <script src="script_aboutUs.js" defer></script>
+</body>
+</html>
