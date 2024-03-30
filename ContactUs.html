@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - LESSGO Cab Services</title>
+    <link rel="stylesheet" href="ContactStyle.css">
+    <script src="script.js" defer></script> <!-- Linking the JavaScript file -->
+
+</head>
+<body>
+    <header>
+        <div id="brand">
+            <img src="images/Logo.png" alt="logo" style="width: 120px;">
+            <h3>LESSGO - Cab Services</h3>
+        </div>
+        <div id="nav">
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="aboutUs.html">About us</a></li>
+                    <li><a>Contact us</a></li>
+                    <li><button id="cta" onclick="bookRide()">Book a Ride</button></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <section id="contact">
+            <div class="container">
+                <h1>Contact Us</h1>
+                <p>Have questions? We're here to help. Fill out the form below or reach out to us via phone or email.</p>
+                <form action="#" method="POST">
+                    <label for="name">Your Name</label>
+                    <input type="text" id="name" name="name" required>
+
+                    <label for="email">Your Email</label>
+                    <input type="email" id="email" name="email" required>
+
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" required></textarea>
+
+                    <button type="submit">Send Message</button>
+                </form>
+                <div class="contact-info">
+                    <h2>Contact Information</h2>
+                    <p><strong>Email:</strong> info.support@lessgo.com</p>
+                    <p><strong>Phone:</strong> +91 (123) 456-7890</p>
+                    <p><strong>Address:</strong> GHS Hostel, Manipal University Jaipur</p>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
