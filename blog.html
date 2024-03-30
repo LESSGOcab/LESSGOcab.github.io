@@ -15,11 +15,11 @@
         /* Basic styles */
         body {
             font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
-            color: #333;
-            line-height: 1.6;
+            background-image: url('images/bg.png');
+            background-size: cover; /* Ensure background image covers the entire viewport */
         }
 
+        /* Upper navigation bar styles */
         header {
             background: linear-gradient(to right, #FFA500, #FF0000);
             color: #fff;
@@ -77,20 +77,12 @@
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
 
-        /* Header styles */
-        header {
-            text-align: center;
-            margin-bottom: 20px;
-        }
-
-        header h1 {
-            color: #007bff;
-            margin-bottom: 10px;
-        }
-
         /* Section styles */
         section {
             margin-bottom: 30px;
+            background-color: rgba(255, 255, 255, 0.5); /* Semi-transparent white background */
+            border-radius: 10px; /* Rounded corners */
+            padding: 20px;
         }
 
         h2 {
@@ -125,7 +117,7 @@
 <body>
     <header>
         <div id="brand">
-            <img src="images/Logo.png" alt="logo" style="width: 120px;">
+            <img src="images/Logo.png" alt="logo">
             <h3>LESSGO - Cab Services</h3>
         </div>
         <div id="nav">
