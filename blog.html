@@ -28,11 +28,13 @@
             justify-content: space-between;
             align-items: center;
             height: 100px;
+            border-radius: 10px; /* Rounded corners */
         }
 
         #brand {
             display: flex;
             align-items: center;
+            margin-right: 20px; /* Added margin to create space */
         }
 
         #brand img {
@@ -70,7 +72,7 @@
         /* Container styles */
         .container {
             max-width: 800px;
-            margin: auto;
+            margin: 20px auto; /* Added margin */
             padding: 20px;
             background-color: rgba(255, 255, 255, 0.7); /* Semi-transparent white background */
             border-radius: 10px; /* Rounded corners */
@@ -112,6 +114,19 @@
         a:hover {
             text-decoration: underline;
         }
+
+        /* Card styles */
+        .card {
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+
+        .card img {
+            width: 100%;
+            border-radius: 10px;
+        }
     </style>
 </head>
 <body>
@@ -123,22 +138,25 @@
         <div id="nav">
             <nav>
                 <ul>
-                    <li><a href="#">Home</a></li>
+                    <li><a href="index.html">Home</a></li>
                     <li><a href="aboutUs.html">About us</a></li>
-                    <li><a href="#">Contact us</a></li>
+                    <li><a href="ContactUs.html">Contact us</a></li>
                     <li><button id="cta" onclick="bookRide()">Book a Ride</button></li>
                 </ul>
             </nav>
         </div>
     </header>
     <div class="container">
-        <header>
+        <header style="border-radius: 10px;"> <!-- Apply border-radius here -->
             <h1>Discover Convenience with LESSGO: Your Ultimate Cab Service</h1>
         </header>
         <section>
             <h2>Introducing LESSGO: Redefining Cab Services</h2>
             <p>In today's fast-paced world, convenience is paramount, especially when it comes to transportation. Whether you're heading to work, running errands, or exploring a new city, having a reliable and efficient cab service can make all the difference. That's where LESSGO comes in – your ultimate solution for hassle-free travel.</p>
             <p>LESSGO is not just another cab service; it's a game-changer in the transportation industry. With a focus on simplicity, efficiency, and customer satisfaction, LESSGO is designed to make your journey as smooth as possible.</p>
+        </section>
+        <section>
+            <img src="images/img1.png" alt="image1" style="width: 100%;">
         </section>
         <section>
             <h2>Why Choose LESSGO?</h2>
