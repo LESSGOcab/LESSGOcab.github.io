@@ -67,7 +67,8 @@ nav ul li a {
     border-radius: 10px; /* Rounded corners */
     max-width: 800px; /* Reduced maximum width */
     margin: 0 auto; /* Centerize the main part */
-    margin-top: 70px; /* Adjusted top margin */
+    margin-top: 10px; /* Adjusted top margin */
+    margin-bottom: 10px;
 }
 
 #hero img {
@@ -174,5 +175,69 @@ nav ul li a {
     line-height: 1.5; /* Set line height for better readability */
     text-align: center; /* Center the text horizontally */
 }
+/* Style for the top section */
+.top-section {
+    display: flex; /* Use flexbox for layout */
+    justify-content: center; /* Center the items horizontally */
+    align-items: center; /* Center the items vertically */
+    padding: 20px; /* Add padding */
+    background-color: rgba(255, 255, 255, 0.7); /* Semi-transparent white background */
+    border-radius: 10px; /* Rounded corners */
+    max-width: 800px; /* Limit maximum width */
+    margin: 20px auto; /* Centerize and provide margin */
+}
+
+/* Style for the left section */
+.top-section .left-section,
+.top-section .right-section {
+    flex: 1; /* Allow left and right sections to grow to fill available space */
+    padding: 20px; /* Add padding */
+}
+
+/* Style for the transparent boxes */
+.top-section .left-section h2,
+.top-section .right-section h2,
+.top-section .left-section p,
+.top-section .right-section p {
+    background-color: rgba(255, 255, 255, 0.5); /* Semi-transparent white background */
+    padding: 10px; /* Add padding */
+    border-radius: 10px; /* Rounded corners */
+}
+
+/* Additional styling */
+.top-section .left-section h2,
+.top-section .right-section h2 {
+    margin-bottom: 10px; /* Add some spacing below heading */
+}
+
+.top-section .left-section p,
+.top-section .right-section p {
+    line-height: 1.5; /* Set line height for better readability */
+}
+/* Style for the top section */
+#top {
+    background-color: rgba(255, 255, 255, 0.7); /* Semi-transparent white background */
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 800px;
+    margin: 20px auto;
+    text-align: center;
+    margin-top: 10px; 
+    margin-bottom: 15px; 
+
+
+}
+
+#top h1 {
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+#top p {
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
 
 
