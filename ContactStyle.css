@@ -125,3 +125,8 @@ footer {
     bottom: 0;
     width: 100%;
 }
+.contact-info p {
+    margin-bottom: 5px; /* Reduce the margin between paragraphs */
+    line-height: 1.2; /* Adjust line height for tighter spacing */
+}
+  
