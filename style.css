@@ -9,7 +9,9 @@
 body {
     font-family: Arial, sans-serif;
     background-image: url('images/bg.png');
-    background-size: cover; /* Ensure background image covers the entire viewport */
+    background-size: contain; /* Ensure background image covers the entire viewport */
+    background-position: center; /* Position the background image at the center */
+    
 }
 
 header {
@@ -89,12 +91,14 @@ nav ul li a {
 
 /* FAQ Section styles */
 #faq {
-    background-color: rgba(255, 255, 255, 0.7); /* Semi-transparent white background */
+    background-color: rgba(255, 255, 255, 0.7);
     padding: 20px;
-    border-radius: 10px; /* Rounded corners */
-    max-width: 800px; /* Reduced maximum width */
-    margin: 20px auto; /* Centerize and provide margin */
+    border-radius: 10px;
+    max-width: 800px;
+    margin: 20px auto;
+    
 }
+
 
 .faq-item {
     margin-bottom: 20px; /* Add spacing between each FAQ item */
