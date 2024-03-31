@@ -52,15 +52,21 @@ nav ul li a {
     color: #fff;
 }
 
-#cta {
-    background-color: #ffcc00;
-    color: #333;
-    padding: 8px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
+ #cta {
+        background-color: #ffcc00;
+        color: #333;
+        padding: 8px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: all 0.3s ease; /* Smooth transition */
+    }
 
+    #cta:hover {
+        background-color: #ffdb4d; /* Change background color on hover */
+        color: #000; /* Change text color on hover */
+        transform: scale(1.1); /* Expand on hover */
+    }
 /* Hero Section styles */
 #hero {
     background-color: rgba(255, 255, 255, 0.7); /* Semi-transparent white background */
@@ -242,6 +248,15 @@ nav ul li a {
     line-height: 1.5;
     margin-bottom: 20px;
 }
+a {
+    text-decoration: none;
+    color: black; /* Default color */
+    transition: all 0.3s ease; /* Smooth transition */
+}
 
-
+a:hover {
+    color: #ffcc00; /* Change color on hover */
+    transform: scale(1.1); /* Expand on hover */
+    font-size: 1.2em; /* Increase font size on hover */
+}
 

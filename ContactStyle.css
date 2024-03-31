@@ -9,7 +9,7 @@
 body {
     font-family: Arial, sans-serif;
     background-image: url('images/bg.png');
-    background-size: cover;
+    background-size: contain;
 }
 
 header {
@@ -50,15 +50,6 @@ nav ul li a {
     color: #fff;
 }
 
-#cta {
-    background-color: #ffcc00;
-    color: #333;
-    padding: 8px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
 /* Contact Section styles */
 #contact {
     background-color: rgba(255, 255, 255, 0.9);
@@ -66,7 +57,7 @@ nav ul li a {
     text-align: center;
     border-radius: 10px;
     max-width: 800px;
-    margin: 70px auto 30px; /* Increased margin bottom */
+    margin: 10px auto 30px; /* Adjusted margin */
 }
 
 #contact h1 {
@@ -84,7 +75,7 @@ nav ul li a {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-bottom: 30px; /* Added margin bottom */
+    margin-bottom: 30px;
 }
 
 #contact form label {
@@ -125,8 +116,37 @@ footer {
     bottom: 0;
     width: 100%;
 }
+
 .contact-info p {
-    margin-bottom: 5px; /* Reduce the margin between paragraphs */
-    line-height: 1.2; /* Adjust line height for tighter spacing */
+    margin-bottom: 5px;
+    line-height: 1.2;
 }
-  
+
+/* Common styles */
+#cta {
+    background-color: #ffcc00;
+    color: #333;
+    padding: 8px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+#cta:hover {
+    background-color: #ffdb4d;
+    color: #000;
+    transform: scale(1.1);
+}
+
+a {
+    text-decoration: none;
+    color: black;
+    transition: all 0.3s ease;
+}
+
+a:hover {
+    color: #ffcc00;
+    transform: scale(1.1);
+    font-size: 1.2em;
+}

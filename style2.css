@@ -9,7 +9,7 @@
 body {
     font-family: Arial, sans-serif;
     background-image: url('images/bg.png');
-    background-size: cover; /* Ensure background image covers the entire viewport */
+    background-size: contain; /* Ensure background image covers the entire viewport */
 }
 
 header {
@@ -57,8 +57,14 @@ nav ul li a {
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    transition: all 0.3s ease; /* Smooth transition */
 }
 
+#cta:hover {
+    background-color: #ffdb4d; /* Change background color on hover */
+    color: #000; /* Change text color on hover */
+    transform: scale(1.1); /* Expand on hover */
+}
 /* Booking Form styles */
 section {
     background-color: rgba(255, 255, 255, 0.7); /* Semi-transparent white background */
@@ -104,4 +110,15 @@ input[type="submit"] {
 
 input[type="submit"]:hover {
     background-color: #ffa500;
+}
+a {
+    text-decoration: none;
+    color: black; /* Default color */
+    transition: all 0.3s ease; /* Smooth transition */
+}
+
+a:hover {
+    color: #ffcc00; /* Change color on hover */
+    transform: scale(1.1); /* Expand on hover */
+    font-size: 1.2em; /* Increase font size on hover */
 }
