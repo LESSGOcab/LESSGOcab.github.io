@@ -1,70 +1,4 @@
-/* Reset CSS */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
 
-/* Basic styles */
-body {
-    font-family: Arial, sans-serif;
-    background-image: url('images/bg.png');
-    background-size: contain; /* Ensure background image covers the entire viewport */
-}
-
-header {
-    background: linear-gradient(to right, #FFA500, #FF0000);
-    color: #fff;
-    padding: 10px 20px; /* Adjusted padding */
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 100px;
-}
-
-#brand {
-    display: flex;
-    align-items: center;
-}
-
-#brand img {
-    width: 50px;
-    margin-right: 10px;
-}
-
-nav ul {
-    list-style-type: none;
-    display: flex;
-}
-
-nav ul li {
-    margin-right: 20px;
-}
-
-nav ul li:last-child {
-    margin-right: 0;
-}
-
-nav ul li a {
-    text-decoration: none;
-    color: #fff;
-}
-
-#cta {
-    background-color: #ffcc00;
-    color: #333;
-    padding: 8px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: all 0.3s ease; /* Smooth transition */
-}
-
-#cta:hover {
-    background-color: #ffdb4d; /* Change background color on hover */
-    color: #000; /* Change text color on hover */
-    transform: scale(1.1); /* Expand on hover */
-}
 /* Booking Form styles */
 section {
     background-color: rgba(255, 255, 255, 0.7); /* Semi-transparent white background */
@@ -110,15 +44,4 @@ input[type="submit"] {
 
 input[type="submit"]:hover {
     background-color: #ffa500;
-}
-a {
-    text-decoration: none;
-    color: black; /* Default color */
-    transition: all 0.3s ease; /* Smooth transition */
-}
-
-a:hover {
-    color: #ffcc00; /* Change color on hover */
-    transform: scale(1.1); /* Expand on hover */
-    font-size: 1.2em; /* Increase font size on hover */
 }

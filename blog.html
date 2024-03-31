@@ -4,72 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Discover Convenience with LESSGO: Your Ultimate Cab Service</title>
+    <link rel="stylesheet" href="common.css">
+    <script src="script.js" defer></script> <!-- Linking the JavaScript file -->
     <style>
-        /* Reset CSS */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-/* Basic styles */
-body {
-    font-family: Arial, sans-serif;
-    background-image: url('images/bg.png');
-    background-size: contain; /* Ensure background image covers the entire viewport */
-}
-
-/* Upper navigation bar styles */
-header {
-    background: linear-gradient(to right, #FFA500, #FF0000);
-    color: #fff;
-    padding: 10px 20px; /* Adjusted padding */
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 100px;
-    border-radius: 10px; /* Rounded corners */
-}
-
-#brand {
-    display: flex;
-    align-items: center;
-}
-
-#brand img {
-    width: 120px;
-    margin-right: 10px;
-}
-
-nav ul {
-    list-style-type: none;
-    display: flex;
-}
-
-nav ul li {
-    margin-right: 20px;
-}
-
-nav ul li:last-child {
-    margin-right: 0;
-}
-
-#cta {
-    background-color: #ffcc00;
-    color: #333;
-    padding: 8px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: all 0.3s ease; /* Smooth transition */
-}
-
-#cta:hover {
-    background-color: #ffdb4d; /* Change background color on hover */
-    color: #000; /* Change text color on hover */
-    transform: scale(1.1); /* Expand on hover */
-}
-
 /* Container styles */
 .container {
     max-width: 800px;
