@@ -7,7 +7,7 @@
             background-color: rgba(255, 255, 255, 0.7);
             /* Semi-transparent white background */
             border-radius: 10px;
-            /* Rounded corners */
+ 
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
 
@@ -17,7 +17,7 @@
             background-color: rgba(255, 255, 255, 0.5);
             /* Semi-transparent white background */
             border-radius: 10px;
-            /* Rounded corners */
+
             padding: 20px;
         }
 
@@ -52,12 +52,12 @@
             border-radius: 10px;
         }
 
-        /* Style for the additional-info section */
+
         .additional-info {
             display: flex;
-            /* Use flexbox for layout */
+            
             justify-content: center;
-            /* Center the items horizontally */
+         
             align-items: center;
             /* Center the items vertically */
             padding: 20px;
@@ -173,7 +173,7 @@
         .top-section .left-section p,
         .top-section .right-section p {
             line-height: 1.5;
-            /* Set line height for better readability */
+     
         }
 
         /* Style for the top section */
