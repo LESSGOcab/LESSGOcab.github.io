@@ -1,3 +1,41 @@
+/* Common styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Header styles */
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+}
+
+#brand {
+    display: flex;
+    align-items: center;
+}
+
+#brand img {
+    margin-right: 10px;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+}
 
 /* Booking Form styles */
 section {
@@ -24,13 +62,17 @@ label {
 
 input[type="text"],
 input[type="number"],
-textarea {
-    width: 100%;
-    padding: 10px;
+textarea,
+select,
+input[type="datetime-local"] {
+    width: 100%; /* Adjusted width for all input elements */
+    padding: 5px;
     margin-bottom: 20px; /* Increased bottom margin */
     border: 1px solid #ccc;
     border-radius: 5px;
     box-sizing: border-box;
+    /* Uniform padding for placeholders */
+    padding-left: 10px;
 }
 
 input[type="submit"] {

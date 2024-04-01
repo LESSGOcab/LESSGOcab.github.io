@@ -6,6 +6,7 @@
     <title>LESSGO - Book a Ride</title>
     <link rel="stylesheet" href="common.css">
     <link rel="stylesheet" href="style2.css">
+    <script src="validatForm.js" defer></script> 
     <script src="script.js" defer></script> <!-- Linking the JavaScript file -->
 </head>
 <body>
@@ -30,19 +31,62 @@
         <section>
             <h1>Book a Ride</h1>
             <form action="submit_booking.php" method="post"> <!-- Replace "submit_booking.php" with your form handling script -->
-                <label for="numPassengers">Number of Passengers:</label>
-                <input type="number" id="numPassengers" name="numPassengers" required><br><br>
-                
-                <label for="pickupPoint">Pickup Point:</label>
-                <input type="text" id="pickupPoint" name="pickupPoint" required><br><br>
-                
-                <label for="destination">Destination:</label>
-                <input type="text" id="destination" name="destination" required><br><br>
-                
-                <label for="additionalInfo">Additional Information:</label>
-                <textarea id="additionalInfo" name="additionalInfo" rows="4" cols="50"></textarea><br><br>
-                
-                <input type="submit" value="Submit">
+                <table>
+                    <tr>
+                        <td><label for="numPassengers">Number of Passengers:</label></td>
+                        <td><input type="number" id="numPassengers" name="numPassengers" placeholder="Enter number of passengers" required></td>
+                    </tr>
+                    <tr>
+                        <td><label for="pickupPoint">Pickup Point:</label></td>
+                        <td><input type="text" id="pickupPoint" name="pickupPoint" placeholder="Enter pickup point" required></td>
+                    </tr>
+                    <tr>
+                        <td><label for="destination">Destination:</label></td>
+                        <td><input type="text" id="destination" name="destination" placeholder="Enter destination" required></td>
+                    </tr>
+                    <tr>
+                        <td><label for="preferredVehicleType">Preferred Vehicle Type:</label></td>
+                        <td>
+                            <select id="preferredVehicleType" name="preferredVehicleType" required>
+                                <option disabled selected value="">Select vehicle type</option>
+                                <option value="sedan">Sedan</option>
+                                <option value="SUV">SUV</option>
+                                <option value="van">Auto</option>
+                                <option value="van">Traveller</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><label for="pickupTime">Pickup Time:</label></td>
+                        <td><input type="datetime-local" id="pickupTime" name="pickupTime" required></td>
+                    </tr>
+                    <tr>
+                        <td><label for="specialRequirements">Special Requirements:</label></td>
+                        <td><input type="text" id="specialRequirements" name="specialRequirements" placeholder="Enter any special requirements"></td>
+                    </tr>
+                    <tr>
+                        <td><label for="additionalServices">Additional Services:</label></td>
+                        <td><input type="text" id="additionalServices" name="additionalServices" placeholder="Enter any additional services"></td>
+                    </tr>
+                    <tr>
+                        <td><label for="paymentMethod">Payment Method:</label></td>
+                        <td>
+                            <select id="paymentMethod" name="paymentMethod" required>
+                                <option disabled selected value="">Select payment method</option>
+                                <option value="cash">Cash</option>
+                                <option value="card">Credit/Debit Card</option>
+                                <option value="mobile">Mobile Payment</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><label for="promoCode">Promo Code or Discounts:</label></td>
+                        <td><input type="text" id="promoCode" name="promoCode" placeholder="Enter promo code or discounts"></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2"><input type="submit" value="Submit"></td>
+                    </tr>
+                </table>
             </form>
         </section>
     </main>
