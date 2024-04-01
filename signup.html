@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LESSGO - Sign Up</title>
+    <link rel="stylesheet" href="common.css">
+    <link rel="stylesheet" href="signup.css"> <!-- You can create this CSS file for signup page specific styles -->
+</head>
+<body>
+    <header>
+        <div id="brand">
+            <img src="images/Logo.png" alt="logo" style="width: 120px;">
+            <h3>LESSGO - Cab Services</h3>
+        </div>
+        <div id="nav">
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="blog.html">Blogs</a></li>
+                    <li><a href="aboutUs.html">About us</a></li>
+                    <li><a href="ContactUs.html">Contact us</a></li>
+                    <li><a href="login.html">Login</a></li> <!-- Link to login page -->
+                    <li><a href="signup.html">Sign Up</a></li> <!-- Link to signup page -->
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <form>
+            <fieldset>
+                <legend>Sign Up</legend>
+                <label for="fullname">Full Name:</label>
+                <input type="text" id="fullname" name="fullname" required placeholder="Enter your name">
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required placeholder="Enter your mail">
+
+                <label for="phone">Phone:</label>
+                <input type="tel" id="phone" name="phone" required placeholder="Enter your phone number">
+
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required placeholder="Enter your Password">
+
+                <button type="submit">Sign Up</button>
+            </fieldset>
+            <div class="options">
+                <p>Already have an account?</p> <a href="login.html">Login here</a> <!-- Link to login page -->
+            </div>
+        </form>
+    </main>
+</body>
+</html>

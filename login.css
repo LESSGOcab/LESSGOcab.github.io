@@ -1,0 +1,89 @@
+/* Sign up form styles */
+main {
+    padding: 20px;
+    text-align: center;
+}
+
+form {
+    width: 400px;
+    margin: 0 auto;
+    background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white background */
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+fieldset {
+    border: none;
+    padding: 0;
+    margin: 0;
+}
+
+legend {
+    background: linear-gradient(to right, #1e4cb9, #3923cb); /* Gradient background resembling cityscape at night */
+    color: transparent; /* Hide text color */
+    padding: 5px 10px; /* Adjust padding as needed */
+    border-radius: 3px; /* Rounded corners */
+    font-weight: bold; /* Bold text */
+    background-clip: text; /* Apply gradient to text */
+    -webkit-background-clip: text; /* For Safari */
+    margin-bottom: 20px;
+    font-size: 1.5em;
+}
+
+
+label {
+    display: inline-block; /* Display label elements inline */
+    width: 100px; /* Adjust the width as needed */
+    text-align: left;
+    margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="tel"] {
+    display: inline-block; /* Display input elements inline */
+    width: calc(100% - 110px); /* Adjust the width to fill the remaining space */
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+button[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    background-color: #ffcc00; /* Yellow signup button */
+    color: #333;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+    background-color: #ffdb4d; /* Lighter shade of yellow on hover */
+}
+
+/* Options styles */
+.options {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.options p {
+    margin-bottom: 10px;
+}
+
+.options a {
+    color: #333;
+    text-decoration: none;
+    margin: 0 5px;
+    transition: all 0.3s ease;
+}
+
+.options a:hover {
+    color: #ffcc00;
+    transform: scale(1.1);
+}
