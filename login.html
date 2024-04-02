@@ -6,7 +6,23 @@
     <title>LESSGO - Cab Services</title>
     <link rel="stylesheet" href="common.css">
     <link rel="stylesheet" href="login.css">    
-    <script src="script.js" defer></script> <!-- Linking the JavaScript file -->
+    <script src="script.js" defer></script>
+    <script>
+        function forgotPassword() {
+            // Prompt the user to enter their email address
+            const email = prompt("Enter your email to reset password:");
+            
+            if (email) {
+                // Here you would typically send the email to a server for password reset
+                // For demonstration, let's just log the email to the console
+                console.log("Email entered for password reset: ", email);
+                alert("Password reset email sent to: " + email);
+            } else {
+                // If user cancels or leaves the input empty
+                alert("Email input canceled or empty. Please enter a valid email.");
+            }
+        }
+    </script>    
 </head>
 <body>
     <header>
@@ -31,8 +47,8 @@
         <form action="https://localhost/login.php" method="POST">
             <fieldset>
                 <legend>Login</legend>
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required placeholder="Enter your email">
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" required placeholder="Enter your username">
                 
                 <label for="password">Password:</label>
                 <input type="password" id="password" name="password" required placeholder="Enter your password">
@@ -40,7 +56,7 @@
                 <button type="submit">Login</button>
             </fieldset>
             <div class="options">
-                <a href="#">Forgot Password?</a>
+                <a onclick="forgotPassword()">Forgot Password?</a>
                 <a href="signup.html">Create Account</a>
             </div>
         </form>

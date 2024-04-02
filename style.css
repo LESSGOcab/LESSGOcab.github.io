@@ -1,4 +1,3 @@
-
 /* Hero Section styles */
 #hero {
     background-color: rgba(255, 255, 255, 0.7); /* Semi-transparent white background */
@@ -179,4 +178,42 @@
     font-size: 16px;
     line-height: 1.5;
     margin-bottom: 20px;
+}
+/* Style for the form */
+#top form {
+    display: flex; /* Use flexbox for layout */
+    flex-direction: column; /* Arrange form elements vertically */
+    align-items: center; /* Center the form elements horizontally */
+}
+
+/* Style for the select elements */
+#top select {
+    width: calc(100% - 20px); /* Set width */
+    padding: 10px; /* Add padding */
+    margin-bottom: 10px; /* Add spacing between elements */
+    border-radius: 5px; /* Add rounded corners */
+    border: 1px solid #ccc; /* Add border */
+}
+
+/* Style for the buttons container */
+#top .button-container {
+    display: flex; /* Use flexbox for layout */
+    justify-content: space-between; /* Distribute space evenly between buttons */
+}
+
+/* Style for the buttons */
+#top button {
+    padding: 10px 20px; /* Add padding */
+    border: none; /* Remove default border */
+    border-radius: 5px; /* Add rounded corners */
+    background-color: #007bff; /* Blue background color */
+    color: #fff; /* White text color */
+    cursor: pointer; /* Change cursor to pointer */
+    transition: background-color 0.3s; /* Add transition for smooth hover effect */
+    margin: 10px; /* Add margin around buttons */
+}
+
+/* Hover effect for buttons */
+#top button:hover {
+    background-color: #0056b3; /* Darker blue background color on hover */
 }
