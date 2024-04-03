@@ -9,21 +9,20 @@
     <link rel="icon" href="images/favicon.ico" type="image/x-icon">
     <script src="validatForm.js" defer></script> 
     <!-- Add this script to retrieve query parameters -->
-<script>
-    window.onload = function() {
-        // Get the query parameters from the URL
-        var params = new URLSearchParams(window.location.search);
-        
-        // Get the pickup and destination values from the query parameters
-        var pickup = params.get('pickup');
-        var destination = params.get('destination');
+    <script>
+        window.onload = function() {
+            // Get the query parameters from the URL
+            var params = new URLSearchParams(window.location.search);
+            
+            // Get the pickup and destination values from the query parameters
+            var pickup = params.get('pickup');
+            var destination = params.get('destination');
 
-        // Fill the input fields with the retrieved values
-        document.getElementById('pickupPoint').value = pickup;
-        document.getElementById('destination').value = destination;
-    }
-</script>
-
+            // Fill the input fields with the retrieved values
+            document.getElementById('pickupPoint').value = pickup;
+            document.getElementById('destination').value = destination;
+        }
+    </script>
 </head>
 <body>
     <header>
@@ -55,11 +54,39 @@
                     </tr>
                     <tr>
                         <td><label for="pickupPoint">Pickup Point:</label></td>
-                        <td><input type="text" id="pickupPoint" name="pickupPoint" placeholder="Enter pickup point" required></td>
+                        <td>
+                            <select id="pickupPoint" name="pickupPoint" required>
+                                <option disabled selected>Select pickup location</option>
+                                <option value="Manipal">Manipal</option>
+                                <option value="Railway station">Railway station</option>
+                                <option value="Sindhi Camp">Sindhi Camp</option>
+                                <option value="Airport">Airport</option>
+                                <option value="Hawa Mahal">Hawa Mahal</option>
+                                <option value="Jal Mahal">Jal Mahal</option>
+                                <option value="Nahargarh fort">Nahargarh fort</option>
+                                <option value="Amber Fort">Amber Fort</option>
+                                <option value="WTP">WTP</option>
+                                <option value="City Palace">City Palace</option>
+                            </select>
+                        </td>
                     </tr>
                     <tr>
                         <td><label for="destination">Destination:</label></td>
-                        <td><input type="text" id="destination" name="destination" placeholder="Enter destination" required></td>
+                        <td>
+                            <select id="destination" name="destination" required>
+                                <option disabled selected>Select destination location</option>
+                                <option value="Manipal">Manipal</option>
+                                <option value="Railway station">Railway station</option>
+                                <option value="Sindhi Camp">Sindhi Camp</option>
+                                <option value="Airport">Airport</option>
+                                <option value="Hawa Mahal">Hawa Mahal</option>
+                                <option value="Jal Mahal">Jal Mahal</option>
+                                <option value="Nahargarh fort">Nahargarh fort</option>
+                                <option value="Amber Fort">Amber Fort</option>
+                                <option value="WTP">WTP</option>
+                                <option value="City Palace">City Palace</option>
+                            </select>
+                        </td>
                     </tr>
                     <tr>
                         <td><label for="preferredVehicleType">Preferred Vehicle Type:</label></td>
@@ -105,7 +132,6 @@
                     <button type="submit" id="submit" name="submit">Book Now</button>
                 </div>
             </form>
-            
         </section>
     </main>
 </body>
