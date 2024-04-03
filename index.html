@@ -8,7 +8,12 @@
     <link rel="stylesheet" href="common.css">
     <link rel="stylesheet" href="style.css">
     <link rel="icon" href="images/favicon.ico" type="image/x-icon">
-    <script src="script.js" defer></script> <!-- Linking the JavaScript file -->
+    <script>
+        function bookRide() {
+    window.location.href = "booking.html"; // Redirect to the booking page
+      }
+
+    </script>
 </head>
 
 <body>
@@ -75,7 +80,7 @@
                         <div class="button-container">
                             <!-- Buttons -->
                             <button type='button'>See prices</button>
-                            <button type='button'>Schedule for later</button>
+                            <button type='button' onclick="bookRide()">Schedule for later</button>
                         </div>
                     </form>
                 </div>
