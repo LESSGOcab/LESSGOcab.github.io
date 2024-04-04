@@ -9,18 +9,9 @@
     <link rel="stylesheet" href="style.css">
     <link rel="icon" href="images/favicon.ico" type="image/x-icon">
     <script>
-        
-    function bookRide() {
-        // Get the selected pickup and destination points
-        var pickupPoint = document.getElementById("locationSelect").value;
-        var destination = document.getElementById("destinationSelect").value;
-
-        // Redirect to booking.html with pickup and destination as query parameters
-        window.location.href = "login.html?pickup=" + encodeURIComponent(pickupPoint) + "&destination=" + encodeURIComponent(destination);
-    }
-</script>
-
-
+        function bookRide() {
+            window.location.href = "booking.html"; // Redirect to the booking page
+        }
     </script>
 </head>
 
@@ -55,7 +46,7 @@
                     <p>Request a ride, hop in, and go.</p>
 
                     <!-- Form -->
-                    <form action="https://localhost/lessgo/">
+                    <form action="#">
                         <select id="locationSelect" style="width: calc(100% - 20px); padding: 10px; margin-bottom: 10px;">
                             <option disabled selected>Select pickup location</option>
                             <option value="Manipal">Manipal</option>
@@ -69,8 +60,9 @@
                             <option value="WTP">WTP</option>
                             <option value="City Palace">City Palace</option>
                         </select><br>
-                        
-                        <select id="destinationSelect" style="width: calc(100% - 20px); padding: 10px;">
+
+                        <select name="destination_location" id="destinationSelect"
+                            style="width: calc(100% - 20px); padding: 10px;">
                             <option disabled selected>Select destination location</option>
                             <option value="Manipal">Manipal</option>
                             <option value="Railway station">Railway station</option>
@@ -87,12 +79,13 @@
                         <!-- Buttons -->
                         <div class="button-container">
                             <!-- Buttons -->
-                            <button type='button' onclick="fetchPrices()">See prices</button>
+                            <button type='button'>See prices</button>
                             <button type='button' onclick="bookRide()">Schedule for later</button>
                         </div>
                     </form>
                 </div>
             </div>
+
         </section>
         <section id="hero">
             <div>
