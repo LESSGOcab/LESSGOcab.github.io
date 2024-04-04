@@ -1,6 +1,4 @@
-// alertRedirect.js
+function showAlertAndRedirect(message,redirect)
+{
 
-function showAlertAndRedirect(message, redirectUrl) {
-    alert(message);
-    window.location.href = redirectUrl;
 }
