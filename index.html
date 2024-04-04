@@ -9,9 +9,17 @@
     <link rel="stylesheet" href="style.css">
     <link rel="icon" href="images/favicon.ico" type="image/x-icon">
     <script>
+        
         function bookRide() {
-            window.location.href = "booking.html"; // Redirect to the booking page
-        }
+        // Get the selected pickup and destination points
+        var pickupPoint = document.getElementById("locationSelect").value;
+        var destination = document.getElementById("destinationSelect").value;
+
+        // Redirect to booking.html with pickup and destination as query parameters
+        window.location.href = "login.html?pickup=" + encodeURIComponent(pickupPoint) + "&destination=" + encodeURIComponent(destination);
+    }
+    
+
     </script>
 </head>
 

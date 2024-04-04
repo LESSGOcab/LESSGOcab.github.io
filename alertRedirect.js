@@ -1,0 +1,4 @@
+function showAlertAndRedirect(message,redirect)
+{
+
+}
