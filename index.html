@@ -10,9 +10,8 @@
     <link rel="icon" href="images/favicon.ico" type="image/x-icon">
     <script>
         function bookRide() {
-        window.location.href = "booking.html"; // Redirect to the booking page
-      }
-
+            window.location.href = "booking.html"; // Redirect to the booking page
+        }
     </script>
 </head>
 
@@ -47,8 +46,9 @@
                     <p>Request a ride, hop in, and go.</p>
 
                     <!-- Form -->
-                    <form action="#">
-                        <select id="locationSelect" style="width: calc(100% - 20px); padding: 10px; margin-bottom: 10px;">
+                    <form action="https://localhost/lessgo/fetch.php" method="post">
+                        <select name="pickup_location" id="locationSelect"
+                            style="width: calc(100% - 20px); padding: 10px; margin-bottom: 10px;">
                             <option disabled selected>Select pickup location</option>
                             <option value="Manipal">Manipal</option>
                             <option value="Railway station">Railway station</option>
@@ -61,8 +61,9 @@
                             <option value="WTP">WTP</option>
                             <option value="City Palace">City Palace</option>
                         </select><br>
-                        
-                        <select id="destinationSelect" style="width: calc(100% - 20px); padding: 10px;">
+
+                        <select name="destination_location" id="destinationSelect"
+                            style="width: calc(100% - 20px); padding: 10px;">
                             <option disabled selected>Select destination location</option>
                             <option value="Manipal">Manipal</option>
                             <option value="Railway station">Railway station</option>
@@ -79,12 +80,13 @@
                         <!-- Buttons -->
                         <div class="button-container">
                             <!-- Buttons -->
-                            <button type='button'>See prices</button>
-                            <button type='button' onclick="bookRide()">Schedule for later</button>
+                            <button type="submit">See prices</button>
+                            <button type="button" onclick="bookRide()">Schedule for later</button>
                         </div>
                     </form>
                 </div>
             </div>
+
         </section>
         <section id="hero">
             <div>
