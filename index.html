@@ -54,8 +54,8 @@
                     <p>Request a ride, hop in, and go.</p>
 
                     <!-- Form -->
-                    <form action="#">
-                        <select id="locationSelect" style="width: calc(100% - 20px); padding: 10px; margin-bottom: 10px;">
+                    <form action="https://localhost/lessgo/fetch.php" method="post">
+                        <select name="pickup_location" id="locationSelect" style="width: calc(100% - 20px); padding: 10px; margin-bottom: 10px;">
                             <option disabled selected>Select pickup location</option>
                             <option value="Manipal">Manipal</option>
                             <option value="Railway station">Railway station</option>
@@ -87,7 +87,7 @@
                         <!-- Buttons -->
                         <div class="button-container">
                             <!-- Buttons -->
-                            <button type='button'>See prices</button>
+                            <button type="submit">See prices</button>
                             <button type='button' onclick="bookRide()">Schedule for later</button>
                         </div>
                     </form>
