@@ -16,7 +16,7 @@
         var destination = document.getElementById("destinationSelect").value;
 
         // Redirect to booking.html with pickup and destination as query parameters
-        window.location.href = "booking.html?pickup=" + encodeURIComponent(pickupPoint) + "&destination=" + encodeURIComponent(destination);
+        window.location.href = "login.html?pickup=" + encodeURIComponent(pickupPoint) + "&destination=" + encodeURIComponent(destination);
     }
 </script>
 
@@ -55,7 +55,7 @@
                     <p>Request a ride, hop in, and go.</p>
 
                     <!-- Form -->
-                    <form action="#">
+                    <form action="https://localhost/lessgo/">
                         <select id="locationSelect" style="width: calc(100% - 20px); padding: 10px; margin-bottom: 10px;">
                             <option disabled selected>Select pickup location</option>
                             <option value="Manipal">Manipal</option>
@@ -87,7 +87,7 @@
                         <!-- Buttons -->
                         <div class="button-container">
                             <!-- Buttons -->
-                            <button type='button'>See prices</button>
+                            <button type='button' onclick="fetchPrices()">See prices</button>
                             <button type='button' onclick="bookRide()">Schedule for later</button>
                         </div>
                     </form>
