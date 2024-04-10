@@ -1,0 +1,102 @@
+-- create database
+create database LESSGO;
+use LESSGO;
+
+-- contact us table
+create table contactus(
+Name varchar(20),
+Email varchar(20),
+Message text);
+
+-- promocode table
+create table promocode(
+promocode varchar(20) primary key);
+
+-- locations table
+create table locations(
+location_id int auto_increment primary key,
+location_name varchar(20));
+-- data into locations
+insert into locations(location_name) values
+('Manipal'),
+('Railway Station'),
+('Airport'),
+('Sindhi Camp'),
+('Hawa Mahal'),
+('Jal Mahal'),
+('Nahargarh fort'),
+('Amber Fort'),
+('WTP'),
+('City Palace');
+
+-- Vehicle table
+CREATE TABLE VehicleType (
+    vehicle_type_id INT AUTO_INCREMENT PRIMARY KEY,
+    vehicle_type_name VARCHAR(50) NOT NULL
+);
+-- insert data into vehicle table
+INSERT INTO VehicleType (vehicle_type_name) VALUES
+('sedan'),
+('SUV'),
+('auto'),
+('traveller');
+
+-- Rides table
+CREATE TABLE RideType (
+    ride_type_id INT AUTO_INCREMENT PRIMARY KEY,
+    ride_type_name VARCHAR(50) NOT NULL
+);
+-- insert data into rides table
+INSERT INTO RideType (ride_type_name) VALUES
+('solo'),
+('shared');
+
+-- fare table
+CREATE TABLE Fare (
+    fare_id INT AUTO_INCREMENT PRIMARY KEY,
+    vehicle_type_id INT NOT NULL,
+    ride_type_id INT NOT NULL,
+    pickup_location_id INT NOT NULL,
+    destination_location_id INT NOT NULL,
+    fare_amount DECIMAL(10, 2) NOT NULL,
+    FOREIGN KEY (vehicle_type_id) REFERENCES VehicleType(vehicle_type_id),
+    FOREIGN KEY (ride_type_id) REFERENCES RideType(ride_type_id),
+    FOREIGN KEY (pickup_location_id) REFERENCES Locations(location_id),
+    FOREIGN KEY (destination_location_id) REFERENCES Locations(location_id)
+);
+
+-- Insert fare combinations
+INSERT INTO Fare (vehicle_type_id, ride_type_id, pickup_location_id, destination_location_id, fare_amount)
+SELECT 
+    v.vehicle_type_id,
+    r.ride_type_id,
+    pl.location_id AS pickup_location_id,
+    dl.location_id AS destination_location_id,
+    CASE 
+        WHEN r.ride_type_name = 'solo' THEN ROUND(RAND() * (1200 - 300) + 300, 2)
+        WHEN r.ride_type_name = 'shared' THEN 300
+    END AS fare_amount
+FROM 
+    VehicleType v
+CROSS JOIN 
+    RideType r
+CROSS JOIN 
+    Locations pl
+CROSS JOIN 
+    Locations dl;
+
+-- signup table
+create table signup(
+sno int not null primary key auto_increment,
+fullname varchar(20),
+email varchar(20),
+phone bigint(20),
+password varchar(20),
+repassword varchar(20)
+);
+
+-- login table
+create table login(
+username varchar(20),
+password varchar(20)
+);
