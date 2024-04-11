@@ -23,7 +23,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             if ($result) {
                 $num = mysqli_num_rows($result);
                 if ($num == 1) {
-                    echo  "<script>alert('valid');window.location.href = 'http://127.0.0.1:3000/booking.html';</script>";
+                    echo  "<script>alert('Welcome back! $username');window.location.href = 'http://127.0.0.1:3000/booking.html';</script>";
                 } else {
                     $showError = "invalid credentials";
                     echo  "<script>alert('Invalid Credentials! Make Sure Your Password Is Correct');window.location.href = 'http://127.0.0.1:3000/login.html';</script>";
