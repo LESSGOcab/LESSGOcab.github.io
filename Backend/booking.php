@@ -21,29 +21,35 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $paymentMethod = $_POST["paymentMethod"];
     $promoCode = isset($_POST["promoCode"]) ? $_POST["promoCode"] : null;
 
-    // Inserting the data into the database
-    $query = "INSERT INTO `booking` (`numPassengers`, `pickupPoint`, `destination`, `preferredVehicleType`, `pickupTime`, `specialRequirements`, `additionalServices`, `paymentMethod`, `promoCode`) VALUES ('$numPassengers', '$pickupPoint', '$destination', '$preferredVehicleType', '$pickupTime', '$specialRequirements', '$additionalServices', '$paymentMethod', '$promoCode')";
+    // Check if number of passengers is between 1 and 8
+    if ($numPassengers > 0 && $numPassengers <= 8) {
+        // Inserting the data into the database
+        $query = "INSERT INTO `booking` (`numPassengers`, `pickupPoint`, `destination`, `preferredVehicleType`, `pickupTime`, `specialRequirements`, `additionalServices`, `paymentMethod`, `promoCode`) VALUES ('$numPassengers', '$pickupPoint', '$destination', '$preferredVehicleType', '$pickupTime', '$specialRequirements', '$additionalServices', '$paymentMethod', '$promoCode')";
 
-    if (mysqli_query($con, $query)) {
-        echo "Booking successful!";
-        if (!empty($promoCode)) {
-            $sql = "SELECT promocode FROM `promocode` WHERE promocode='$promoCode'";
-            $result = mysqli_query($con, $sql);
-            if ($result) {
-                $num = mysqli_num_rows($result);
-                if ($num == 1) {
-                    echo " Valid promo code.";
+        if (mysqli_query($con, $query)) {
+            echo "Booking successful!";
+            if (!empty($promoCode)) {
+                $sql = "SELECT promocode FROM `promocode` WHERE promocode='$promoCode'";
+                $result = mysqli_query($con, $sql);
+                if ($result) {
+                    $num = mysqli_num_rows($result);
+                    if ($num == 1) {
+                        echo " Valid promo code.";
+                    } else {
+                        echo " Invalid promo code.";
+                        // If invalid promo code, you might want to remove the inserted booking, depending on your logic
+                        $deleteQuery = "DELETE FROM `booking` WHERE promoCode='$promoCode'";
+                        mysqli_query($con, $deleteQuery);
+                    }
                 } else {
-                    echo " Invalid promo code.";
-                    // If invalid promo code, you might want to remove the inserted booking, depending on your logic
-                    $deleteQuery = "DELETE FROM `booking` WHERE promoCode='$promoCode'";
-                    mysqli_query($con, $deleteQuery);
+                    echo "Error checking promo code: " . mysqli_error($con);
                 }
-            } else {
-                echo "Error checking promo code: " . mysqli_error($con);
             }
+        } else {
+            echo "Error: " . $query . "<br>" . mysqli_error($con);
         }
     } else {
-        echo "Error: " . $query . "<br>" . mysqli_error($con);
+        echo "Invalid number of passengers. Please select a number between 1 and 8.";
     }
 }
+?>
