@@ -134,15 +134,16 @@
         </div>
     </footer>
     <script>
-        document.getElementById("subscribeForm").addEventListener("submit", function (event) {
+        document.getElementById("form").addEventListener("submit", function (event) {
             event.preventDefault(); // Prevent the default form submission
-            var email = document.getElementById("email").value;
+            var email = document.querySelector("#form input[name='email']").value;
             // Here you can handle the subscription, such as sending the email to a server or displaying a thank you message.
             alert("Thank you for subscribing! You will receive updates and special offers.");
             // You can also reset the form if needed
-            document.getElementById("subscribeForm").reset();
+            document.getElementById("form").reset();
         });
     </script>
+    
 </body>
 
 </html>

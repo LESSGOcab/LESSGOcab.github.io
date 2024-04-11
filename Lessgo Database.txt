@@ -100,3 +100,18 @@ create table login(
 username varchar(20),
 password varchar(20)
 );
+
+-- booking table
+create table booking(
+    sno int AUTO_INCREMENT primary key,
+    fullname varchar(30),
+    pickupPoint varchar(20),
+    destination varchar(20),
+    numPassengers int,
+    pickupTime datetime,
+    preferredVehicleType varchar(20),
+    specialRequirements varchar(20),
+    additionalServices varchar(20),
+    paymentMethod text,
+    promocode varchar(20)
+);
