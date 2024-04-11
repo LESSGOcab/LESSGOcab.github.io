@@ -13,7 +13,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if (isset($_POST['username'], $_POST['password'])) {
         $username = $_POST["username"];
         $password = $_POST["password"];
-        $value = "INSERT INTO `login` (`username`, `password`) VALUES ('$username', '$password');";
+        
+        $value = "INSERT INTO `login` (`username`, `password`,`login_time`) VALUES ('$username', '$password',CURRENT_TIMESTAMP);";
         $insertResult = mysqli_query($con, $value); // Execute the INSERT query first
 
         if ($insertResult) { // Check if the INSERT was successful
@@ -23,10 +24,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             if ($result) {
                 $num = mysqli_num_rows($result);
                 if ($num == 1) {
-                    echo  "<script>alert('Welcome back! $username');window.location.href = 'http://127.0.0.1:3000/booking.html';</script>";
+                    echo  "<script>alert('Welcome back! $username');window.location.href = 'http://127.0.0.1:5500/booking.html';</script>";
                 } else {
                     $showError = "invalid credentials";
-                    echo  "<script>alert('Invalid Credentials! Make Sure Your Password Is Correct');window.location.href = 'http://127.0.0.1:3000/login.html';</script>";
+                    echo  "<script>alert('Invalid Credentials! Make Sure Your Password Is Correct');window.location.href = 'http://127.0.0.1:5500/login.html';</script>";
                 }
             } else {
                 echo "Error: " . mysqli_error($con);
