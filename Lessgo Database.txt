@@ -100,6 +100,9 @@ create table login(
 username varchar(20),
 password varchar(20)
 );
+ALTER TABLE login
+ADD COLUMN login_time TIMESTAMP DEFAULT CURRENT_TIMESTAMP;
+
 
 -- booking table
 create table booking(
