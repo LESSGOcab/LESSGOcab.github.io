@@ -27,7 +27,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $query = "INSERT INTO `booking` (`numPassengers`, `pickupPoint`, `destination`, `preferredVehicleType`, `pickupTime`, `specialRequirements`, `additionalServices`, `paymentMethod`, `promoCode`) VALUES ('$numPassengers', '$pickupPoint', '$destination', '$preferredVehicleType', '$pickupTime', '$specialRequirements', '$additionalServices', '$paymentMethod', '$promoCode')";
 
         if (mysqli_query($con, $query)) {
-            echo "Booking successful!";
+            echo "<script>alert('Booking Successful!');window.location.href = 'http://127.0.0.1:5500/index.html';</script>";
             if (!empty($promoCode)) {
                 $sql = "SELECT promocode FROM `promocode` WHERE promocode='$promoCode'";
                 $result = mysqli_query($con, $sql);
