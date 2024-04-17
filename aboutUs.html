@@ -62,7 +62,7 @@
 
         <!-- Reviews Section -->
         <section id="reviews">
-            <h2>Logo ne kya kaha?</h2> <!-- Changed heading here -->
+            <h2>Logo ne kya kaha?</h2>
             <div class="container">
                 <div class="card">
                     <div class="card-content">
@@ -86,7 +86,6 @@
                         <p>"I had a wonderful experience with LESSGO during my visit to the city. The driver was friendly and courteous, and the car was clean and well-maintained. I highly recommend it"</p>
                     </div>
                 </div>
-                <!-- Add more reviews here -->
                 <div class="card">
                     <div class="card-content">
                         <h2>Amazing Service!</h2>
@@ -135,11 +134,10 @@
     </footer>
     <script>
         document.getElementById("form").addEventListener("submit", function (event) {
-            event.preventDefault(); // Prevent the default form submission
+            event.preventDefault();
             var email = document.querySelector("#form input[name='email']").value;
-            // Here you can handle the subscription, such as sending the email to a server or displaying a thank you message.
             alert("Thank you for subscribing! You will receive updates and special offers.");
-            // You can also reset the form if needed
+           
             document.getElementById("form").reset();
         });
     </script>

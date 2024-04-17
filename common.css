@@ -1,15 +1,14 @@
-/* Reset CSS */
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Basic styles */
 body {
     font-family: Arial, sans-serif;
     background-image: url('images/bg.png');
-    background-size: contain; /* Make the background cover the entire page */
+    background-size: contain; 
 }
 
 header {
@@ -50,7 +49,6 @@ nav ul li a {
     color: #fff;
 }
 
-/* Common button styles */
 #cta {
     background-color: #ffcc00;
     color: #333;
@@ -67,7 +65,6 @@ nav ul li a {
     transform: scale(1.1);
 }
 
-/* Common link styles */
 a {
     text-decoration: none;
     color: black;

@@ -11,7 +11,6 @@
     <script>
 
         function bookRide() {
-            // Get the selected pickup and destination points
             var pickupPoint = document.getElementById("locationSelect").value;
             var destination = document.getElementById("destinationSelect").value;
 
@@ -45,13 +44,13 @@
     <main>
         <section id="top">
             <div style="display: flex;">
-                <!-- Left Section -->
+
                 <div style="flex: 1; padding: 20px;">
 
                     <h1 style="color:#000;">Always the ride you want</h1>
                     <p>Request a ride, hop in, and go.</p>
 
-                    <!-- Form -->
+
                     <form action="https://localhost/lessgo/fetch.php" method="post">
                         <select name="pickup_location" id="locationSelect"
                             style="width: calc(100% - 20px); padding: 10px; margin-bottom: 10px;">
@@ -83,7 +82,7 @@
                             <option value="City Palace">City Palace</option>
                         </select><br>
 
-                        <!-- Buttons -->
+
                         <div class="button-container">
                             <!-- Buttons -->
                             <button type="submit">See prices</button>

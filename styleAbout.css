@@ -1,9 +1,8 @@
-/* About Us page specific styles */
 #about {
     padding: 50px 20px;
     text-align: center;
-    background-color: rgba(243, 241, 236, 0.637); /* Semi-transparent orangish background color */
-    color: #fff; /* Text color */
+    background-color: rgba(243, 241, 236, 0.637); 
+    color: #fff; 
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     margin: 20px auto;
@@ -14,8 +13,6 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-wrap: wrap;
-    gap: 20px;
 }
 
 .quote {
@@ -30,7 +27,7 @@
     background-color: #fff;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    max-width: 300px; /* Adjust this value as needed */
+    max-width: 300px; 
 }
 
 .card img {
@@ -53,38 +50,11 @@
     color: #666;
     margin-bottom: 10px;
 }
-
-/* Blogs Section */
-#blogs {
-    padding: 50px 20px;
-    text-align: center;
-    background-color: rgba(243, 241, 236, 0.637); /* Semi-transparent orangish background color */
-    color: #fff; /* Text color */
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    margin: 20px auto;
-    max-width: 800px;
-}
-
-#blogs h2 {
-    margin-bottom: 20px;
-}
-
-.blog {
-    margin-bottom: 20px;
-}
-
-.blog h3 {
-    margin-bottom: 10px;
-    color: #333;
-}
-
-/* Reviews Section */
 #reviews {
     padding: 50px 20px;
     text-align: center;
-    background-color: rgba(243, 241, 236, 0.637); /* Semi-transparent orangish background color */
-    color: #333; /* Text color */
+    background-color: rgba(243, 241, 236, 0.637); 
+    color: #333; 
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     margin: 20px auto;
@@ -93,47 +63,45 @@
 
 #reviews h2 {
     margin-bottom: 20px;
-    color: #333; /* Text color */
+    color: #333; 
 }
 
 .review {
     margin-bottom: 20px;
-    background-color: #fff; /* White background color */
+    background-color: #fff; 
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    max-width: 300px; /* Adjust this value as needed */
-    display: inline-block; /* Display reviews side by side */
-    vertical-align: top; /* Align reviews to the top */
+    max-width: 300px; 
+    vertical-align: top; 
 }
 
 .review h2 {
     margin-bottom: 10px;
-    color: #333; /* Text color */
-    background-color: #ffcc00; /* Yellow background color */
+    color: #333; 
+    background-color: #ffcc00; 
     padding: 10px;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
 }
 
 .review p {
-    color: #666; /* Text color */
+    color: #666; 
     padding: 20px;
 }
 
 .container {
     display: flex;
     justify-content: center;
-    align-items: flex-start; /* Align items to the top */
+    align-items: flex-start; 
     flex-wrap: wrap;
     gap: 20px;
 }
 
-/* Stay Connected Section */
 footer {
-    background-color: rgba(243, 241, 236, 0.637); /* Semi-transparent background */
-    color: #333; /* Text color */
+    background-color: rgba(243, 241, 236, 0.637); 
+    color: #333; 
     padding: 10px 10px;
-    text-align: center; /* Specify how you want the text to be aligned */
+    text-align: center; 
 }
 
 #sub {

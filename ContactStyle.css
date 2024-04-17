@@ -1,11 +1,10 @@
-/* Contact Section styles */
 #contact {
     background-color: rgba(255, 255, 255, 0.9);
     padding: 20px;
     text-align: center;
     border-radius: 10px;
     max-width: 800px;
-    margin: 10px auto 30px; /* Adjusted margin */
+    margin: 10px auto 30px; 
 }
 
 #contact h1 {
@@ -54,16 +53,6 @@
     cursor: pointer;
 }
 
-/* Footer styles */
-footer {
-    background: linear-gradient(to right, #FFA500, #FF0000);
-    color: #fff;
-    padding: 10px 20px;
-    text-align: center;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-}
 
 .contact-info p {
     margin-bottom: 5px;

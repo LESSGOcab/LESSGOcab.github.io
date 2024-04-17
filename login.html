@@ -7,19 +7,18 @@
     <link rel="stylesheet" href="common.css">
     <link rel="stylesheet" href="login.css">    
     <link rel="icon" href="images/favicon.ico" type="image/x-icon">
-    
     <script>
         function forgotPassword() {
-            // Prompt the user to enter their email address
             const email = prompt("Enter your email to reset password:");
-            
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
             if (email) {
-                // Here you would typically send the email to a server for password reset
-                // For demonstration, let's just log the email to the console
-                console.log("Email entered for password reset: ", email);
-                alert("Password reset email sent to: " + email);
+                if (emailRegex.test(email)) {
+                    console.log("Email entered for password reset: ", email);
+                    alert("Password reset email sent to: " + email);
+                } else {
+                    alert("Invalid email format. Please enter a valid email address.");
+                }
             } else {
-                // If user cancels or leaves the input empty
                 alert("Email input canceled or empty. Please enter a valid email.");
             }
         }

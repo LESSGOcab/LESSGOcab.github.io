@@ -1,172 +1,159 @@
-/* Hero Section styles */
 #hero {
-    background-color: rgba(255, 255, 255, 0.7); /* Semi-transparent white background */
+    background-color: rgba(255, 255, 255, 0.7);
     padding: 20px;
     text-align: center;
-    border-radius: 10px; /* Rounded corners */
-    max-width: 800px; /* Reduced maximum width */
-    margin: 0 auto; /* Centerize the main part */
-    margin-top: 10px; /* Adjusted top margin */
+    border-radius: 10px;
+    max-width: 800px;
+    margin: 0 auto;
+    margin-top: 10px;
     margin-bottom: 10px;
 }
 
 #hero img {
-    width: 120px; /* Adjusted image size */
+    width: 120px;
     margin-bottom: 20px;
 }
 
 #hero h1 {
-    font-size: 28px; /* Reduced font size */
+    font-size: 28px;
     margin-bottom: 10px;
 }
 
 #hero h3 {
-    font-size: 16px; /* Reduced font size */
+    font-size: 16px;
     line-height: 1.5;
     margin-bottom: 20px;
 }
 
-/* FAQ Section styles */
 #faq {
     background-color: rgba(255, 255, 255, 0.7);
     padding: 20px;
     border-radius: 10px;
     max-width: 800px;
     margin: 20px auto;
-    
 }
 
-
 .faq-item {
-    margin-bottom: 20px; /* Add spacing between each FAQ item */
+    margin-bottom: 20px;
 }
 
 .faq-item details {
-    border-bottom: 1px solid #ccc; /* Add bottom border for each question */
-    cursor: pointer; /* Change cursor to pointer when hovering over question */
+    border-bottom: 1px solid #ccc;
+    cursor: pointer;
 }
 
 .faq-item details summary {
-    list-style: none; /* Remove default list styling */
-    background: none; /* Remove background */
-    border: none; /* Remove border */
-    padding: 10px 0; /* Add padding to the summary */
-    cursor: pointer; /* Change cursor to pointer */
-    font-weight: bold; /* Make the question text bold */
-    outline: none; /* Remove default focus outline */
-    position: relative; /* Position relative for the arrow */
+    list-style: none;
+    background: none;
+    border: none;
+    padding: 10px 0;
+    cursor: pointer;
+    font-weight: bold;
+    outline: none;
+    position: relative;
 }
 
 .faq-item details summary::after {
-    content: '▼'; /* Default arrow pointing down */
-    position: absolute; /* Position absolute for the arrow */
-    right: 0; /* Align arrow to the right */
-    transition: transform 0.3s; /* Add transition for smooth animation */
+    content: '▼';
+    position: absolute;
+    right: 0;
+    transition: transform 0.3s;
 }
 
 .faq-item details[open] summary::after {
-    transform: rotate(180deg); /* Rotate arrow when details are open */
+    transform: rotate(180deg);
 }
 
 .faq-item p {
-    padding: 0 0 0 20px; /* Add padding to the answer */
-}
-/* Style for the additional-info section */
-.additional-info {
-    display: flex; /* Use flexbox for layout */
-    justify-content: center; /* Center the items horizontally */
-    align-items: center; /* Center the items vertically */
-    padding: 20px; /* Add padding */
-    background-color: rgba(255, 255, 255, 0.7); /* Semi-transparent white background */
-    border-radius: 10px; /* Rounded corners */
-    max-width: 800px; /* Limit maximum width */
-    margin: 20px auto; /* Centerize and provide margin */
+    padding: 0 0 0 20px;
 }
 
-/* Style for the left-section containing the image */
+.additional-info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.7);
+    border-radius: 10px;
+    max-width: 800px;
+    margin: 20px auto;
+}
+
 .left-section {
-    flex: 1; /* Allow left-section to grow to fill available space */
-    margin-right: 1px; /* Reduce spacing between left and right sections */
-    
+    flex: 1;
+    margin-right: 1px;
 }
 
 .left-section img {
-    max-width: 100%; /* Set maximum width for the image */
-    height: auto; /* Maintain aspect ratio */
-    display: inline-block; /* Ensure image is centered */
-    border-radius: 10px; /* Rounded corners */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add shadow */
+    max-width: 100%;
+    height: auto;
+    display: inline-block;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-/* Style for the right-section containing the text */
 .right-section {
-    flex: 1; /* Allow right-section to grow to fill available space */
-    margin-left: 10px; /* Reduce spacing between left and right sections */
+    flex: 1;
+    margin-left: 10px;
 }
 
-/* Style for the text inside right-section */
 .right-section h2 {
-    font-size: 24px; /* Adjust font size for heading */
-    margin-bottom: 10px; /* Add some spacing below heading */
-    text-align: center; /* Center the text horizontally */
+    font-size: 24px;
+    margin-bottom: 10px;
+    text-align: center;
 }
 
 .right-section p {
-    font-size: 16px; /* Adjust font size for paragraphs */
-    line-height: 1.5; /* Set line height for better readability */
-    text-align: center; /* Center the text horizontally */
-}
-/* Style for the top section */
-.top-section {
-    display: flex; /* Use flexbox for layout */
-    justify-content: center; /* Center the items horizontally */
-    align-items: center; /* Center the items vertically */
-    padding: 20px; /* Add padding */
-    background-color: rgba(255, 255, 255, 0.7); /* Semi-transparent white background */
-    border-radius: 10px; /* Rounded corners */
-    max-width: 800px; /* Limit maximum width */
-    margin: 20px auto; /* Centerize and provide margin */
+    font-size: 16px;
+    line-height: 1.5;
+    text-align: center;
 }
 
-/* Style for the left section */
+.top-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.7);
+    border-radius: 10px;
+    max-width: 800px;
+    margin: 20px auto;
+}
+
 .top-section .left-section,
 .top-section .right-section {
-    flex: 1; /* Allow left and right sections to grow to fill available space */
-    padding: 20px; /* Add padding */
+    flex: 1;
+    padding: 20px;
 }
 
-/* Style for the transparent boxes */
 .top-section .left-section h2,
 .top-section .right-section h2,
 .top-section .left-section p,
 .top-section .right-section p {
-    background-color: rgba(255, 255, 255, 0.5); /* Semi-transparent white background */
-    padding: 10px; /* Add padding */
-    border-radius: 10px; /* Rounded corners */
+    background-color: rgba(255, 255, 255, 0.5);
+    padding: 10px;
+    border-radius: 10px;
 }
 
-/* Additional styling */
 .top-section .left-section h2,
 .top-section .right-section h2 {
-    margin-bottom: 10px; /* Add some spacing below heading */
+    margin-bottom: 10px;
 }
 
 .top-section .left-section p,
 .top-section .right-section p {
-    line-height: 1.5; /* Set line height for better readability */
+    line-height: 1.5;
 }
- /* Style for the top section */
+
 #top {
-    background-color: rgba(255, 255, 255, 0.7); /* Semi-transparent white background */
+    background-color: rgba(255, 255, 255, 0.7);
     padding: 20px;
     border-radius: 10px;
     max-width: 800px;
     margin: 20px auto;
     text-align: center;
-    margin-top: 10px; 
-    margin-bottom: 15px; 
-
-
+    margin-top: 10px;
+    margin-bottom: 15px;
 }
 
 #top h1 {
@@ -179,41 +166,37 @@
     line-height: 1.5;
     margin-bottom: 20px;
 }
-/* Style for the form */
+
 #top form {
-    display: flex; /* Use flexbox for layout */
-    flex-direction: column; /* Arrange form elements vertically */
-    align-items: center; /* Center the form elements horizontally */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-/* Style for the select elements */
 #top select {
-    width: calc(100% - 20px); /* Set width */
-    padding: 10px; /* Add padding */
-    margin-bottom: 10px; /* Add spacing between elements */
-    border-radius: 5px; /* Add rounded corners */
-    border: 1px solid #ccc; /* Add border */
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
 }
 
-/* Style for the buttons container */
 #top .button-container {
-    display: flex; /* Use flexbox for layout */
-    justify-content: space-between; /* Distribute space evenly between buttons */
+    display: flex;
+    justify-content: space-between;
 }
 
-/* Style for the buttons */
 #top button {
-    padding: 10px 20px; /* Add padding */
-    border: none; /* Remove default border */
-    border-radius: 5px; /* Add rounded corners */
-    background-color: #007bff; /* Blue background color */
-    color: #fff; /* White text color */
-    cursor: pointer; /* Change cursor to pointer */
-    transition: background-color 0.3s; /* Add transition for smooth hover effect */
-    margin: 10px; /* Add margin around buttons */
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin: 10px;
 }
 
-/* Hover effect for buttons */
 #top button:hover {
-    background-color: #0056b3; /* Darker blue background color on hover */
+    background-color: #0056b3;
 }
