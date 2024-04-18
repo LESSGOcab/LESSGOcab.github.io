@@ -10,7 +10,6 @@ if (!$con) {
 }
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-
     $numPassengers = $_POST["numPassengers"];
     $pickupPoint = $_POST["pickupPoint"];
     $destination = $_POST["destination"];
@@ -21,35 +20,40 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $paymentMethod = $_POST["paymentMethod"];
     $promoCode = isset($_POST["promoCode"]) ? $_POST["promoCode"] : null;
 
-
     if ($numPassengers > 0 && $numPassengers <= 7) {
-    
+
         $query = "INSERT INTO `booking` (`numPassengers`, `pickupPoint`, `destination`, `preferredVehicleType`, `pickupTime`, `specialRequirements`, `additionalServices`, `paymentMethod`, `promoCode`) VALUES ('$numPassengers', '$pickupPoint', '$destination', '$preferredVehicleType', '$pickupTime', '$specialRequirements', '$additionalServices', '$paymentMethod', '$promoCode')";
 
-        if (mysqli_query($con, $query)) {
-            echo "<script>alert('Booking Successful!');window.location.href = 'http://127.0.0.1:5500/index.html';</script>";
-            if (!empty($promoCode)) {
-                $sql = "SELECT promocode FROM `promocode` WHERE promocode='$promoCode'";
-                $result = mysqli_query($con, $sql);
-                if ($result) {
-                    $num = mysqli_num_rows($result);
-                    if ($num == 1) {
-                        echo " Valid promo code.";
+        if (!empty($promoCode)) {
+            $sql = "SELECT promocode FROM `promocode` WHERE promocode='$promoCode'";
+            $result = mysqli_query($con, $sql);
+            if ($result) {
+                $num = mysqli_num_rows($result);
+                if ($num == 1) {
+                    
+                    if (mysqli_query($con, $query)) {
+                        echo "<script>alert('Booking Successful!');window.location.href = 'http://127.0.0.1:3000/index.html';</script>";
                     } else {
-                        echo " Invalid promo code.";
-                       
-                        $deleteQuery = "DELETE FROM `booking` WHERE promoCode='$promoCode'";
-                        mysqli_query($con, $deleteQuery);
+                        echo "Error: " . $query . "<br>" . mysqli_error($con);
                     }
                 } else {
-                    echo "Error checking promo code: " . mysqli_error($con);
+                    
+                    echo "<script>alert('Booking unsuccessful! Invalid promocode used');window.location.href = 'http://127.0.0.1:3000/index.html';</script>";
                 }
+            } else {
+                
+                echo "<script>alert('Error checking promo code:');window.location.href='http://127.0.0.1:3000/booking.html';</script>" . mysqli_error($con);
             }
         } else {
-            echo "Error: " . $query . "<br>" . mysqli_error($con);
+            
+            if (mysqli_query($con, $query)) {
+                echo "<script>alert('Booking Successful!');window.location.href = 'http://127.0.0.1:3000/index.html';</script>";
+            } else {
+                echo "Error: " . $query . "<br>" . mysqli_error($con);
+            }
         }
+        
     } else {
-        echo "Invalid number of passengers. Please select a number between 1 and 8.";
+        echo "<script>alert('Invalid number of passengers. Please select a number between 1 and 8.');window.location.href='http://127.0.0.1:3000/booking.html';</script>";
     }
 }
-?>
