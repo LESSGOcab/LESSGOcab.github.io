@@ -10,7 +10,7 @@ if (!$con) {
 }
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    // Assuming your form fields are named appropriately, adjust if needed
+
     $numPassengers = $_POST["numPassengers"];
     $pickupPoint = $_POST["pickupPoint"];
     $destination = $_POST["destination"];
@@ -21,9 +21,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $paymentMethod = $_POST["paymentMethod"];
     $promoCode = isset($_POST["promoCode"]) ? $_POST["promoCode"] : null;
 
-    // Check if number of passengers is between 1 and 8
-    if ($numPassengers > 0 && $numPassengers <= 8) {
-        // Inserting the data into the database
+
+    if ($numPassengers > 0 && $numPassengers <= 7) {
+    
         $query = "INSERT INTO `booking` (`numPassengers`, `pickupPoint`, `destination`, `preferredVehicleType`, `pickupTime`, `specialRequirements`, `additionalServices`, `paymentMethod`, `promoCode`) VALUES ('$numPassengers', '$pickupPoint', '$destination', '$preferredVehicleType', '$pickupTime', '$specialRequirements', '$additionalServices', '$paymentMethod', '$promoCode')";
 
         if (mysqli_query($con, $query)) {
@@ -37,7 +37,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                         echo " Valid promo code.";
                     } else {
                         echo " Invalid promo code.";
-                        // If invalid promo code, you might want to remove the inserted booking, depending on your logic
+                       
                         $deleteQuery = "DELETE FROM `booking` WHERE promoCode='$promoCode'";
                         mysqli_query($con, $deleteQuery);
                     }

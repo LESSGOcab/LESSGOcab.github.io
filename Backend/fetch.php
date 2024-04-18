@@ -1,8 +1,8 @@
 <?php
-// Database connection parameters
+
 $server = "localhost";
-$username = "root"; // Replace with your database username
-$password = ""; // Replace with your database password
+$username = "root"; 
+$password = ""; 
 $database = "lessgo";
 
 // Create connection
@@ -16,12 +16,11 @@ else{
     echo "Connected successfully"."<br>";
 }
 
-// Retrieve pickup and destination points from user form
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $pickup = $_POST['pickup_location']; // Assuming the name attribute of the pickup location input field is 'pickup_location'
-    $destination = $_POST['destination_location']; // Assuming the name attribute of the destination location input field is 'destination_location'
+    $pickup = $_POST['pickup_location']; 
+    $destination = $_POST['destination_location']; 
 
-    // SQL query to retrieve fare information based on user input
+
     if($pickup!=$destination){
     $sql = "SELECT r.ride_type_name AS ride_type, v.vehicle_type_name AS vehicle_type, f.fare_amount AS fare
             FROM fare f
@@ -34,12 +33,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         echo "The pickup location and destination location are same!";
     }
 
-    // Execute the query
+
     $result = mysqli_query($conn, $sql);
 
-    // Check if there are any rows returned
     if (mysqli_num_rows($result) > 0) {
-        // Output fare information in a table format with bordered style
+   
         echo "<table style='border: 2px solid black; border-collapse: collapse;'>
                 <tr>
                     <th style='border: 2px solid black; padding: 8px;'>Ride Type</th>
