@@ -15,11 +15,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $password = $_POST["password"];
         
         $value = "INSERT INTO `login` (`username`, `password`,`login_time`) VALUES ('$username', '$password',CURRENT_TIMESTAMP);";
-        $insertResult = mysqli_query($con, $value); // Execute the INSERT query first
+        $insertResult = mysqli_query($con, $value);
 
-        if ($insertResult) { // Check if the INSERT was successful
+        if ($insertResult) { 
             $sql = "SELECT * FROM `signup` WHERE fullname='$username' AND password='$password'";
-            $result = mysqli_query($con, $sql); // Execute the SELECT query without the $value parameter
+            $result = mysqli_query($con, $sql); 
 
             if ($result) {
                 $num = mysqli_num_rows($result);

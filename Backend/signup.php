@@ -6,7 +6,7 @@ $database = "lessgo";
 
 $con = mysqli_connect($server, $username, $password, $database);
 if ($con) {
-   //connection Successful
+
     echo "<br>";
 }
 
@@ -19,7 +19,7 @@ if (isset($_POST['fullname'], $_POST['email'], $_POST['phone'], $_POST['password
 
     $sql = "INSERT INTO `lessgo`.`signup`(fullname, email, phone, password, repassword) VALUES ('$fullname','$email','$phone','$password','$repassword')";
 
-    // Directly check if passwords match
+    
     if ($password == $repassword) {
         if (mysqli_query($con, $sql)) {
             echo "<script>alert('New Account Created!');window.location.href = 'http://127.0.0.1:3000/index.html';</script>";
